@@ -2,8 +2,12 @@
 
 import { useState, useEffect } from "react"
 
+type Task = {
+  title: string
+}
+
 export default function Dashboard() {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState<Task[]>([])
   const [title, setTitle] = useState("")
 
   async function fetchTasks() {
