@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server"
 
-let tasks = []
+type Task = {
+  title: string
+}
+
+let tasks: Task[] = []
 
 export async function GET() {
   return NextResponse.json(tasks)
